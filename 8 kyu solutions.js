@@ -1,93 +1,67 @@
-// 7 kyu - Round up to the next multiple of 5
-function roundToNext5(n){
-  return Math.ceil(n/5)*5;
+// 8 kyu - Filling an array (part 1)
+const arr = N => {
+  let a = []
+  for(let i = 0; i < N; i++){
+    a.push(i)
 }
-// 7 kyu - Find the capitals
-var capitals = function (word) {
-  let arr = []
-  word.split('')
-      .forEach((e, i) => {
-    if(e === e.toUpperCase()){
-      arr.push(i)
-    }
-  })
-  return arr.sort()
-};
-// 7 kyu - Remove anchor from URL
-function removeUrlAnchor(url){
-  return url.split('#')[0];
+  return a
 }
-// 7 kyu - Sum of a sequence
-const sequenceSum = (begin, end, step) => {
-  let result = 0
-  if(end >= begin){
-    for(let i = begin; i <= end; i += step){
-      result += i
-    }
+// 8 kyu - Filter out the geese
+function gooseFilter (birds) {
+  var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]
+  return birds.filter(e => !geese.includes(e))
+}
+// 8 kyu - Well of Ideas - Easy Version
+function well(x){
+  let result = x.filter(e => e === 'good').length
+  let answer
+  if(result < 1){
+    answer = 'Fail!'
+  }else if(result > 2){
+    answer = 'I smell a series!'
+  }else{
+    answer = 'Publish!'
   }
-  return result
-};
-// 7 kyu - Beginner Series #3 Sum of Numbers
-function getSum( a, b )
-{
-let result = 0;
-   if (a === b) { 
-     return a;
-   } else if (a > b) {
-     for (let i = b; i <= a; i++)
-     result += i;
-   } else {
-     for (let i = a; i <= b; i++)
-     result += i; 
-   }
-  
-  return result;
+  return answer
 }
-// 7 kyu - Exes and Ohs
-function XO(str) {
-  let noX = 0
-  let noO = 0
-  str.split('')
-        .forEach(e => {
-      if(e.toLowerCase() === 'x'){
-        noX++
-      }else if(e.toLowerCase() === 'o'){
-        noO++
-      }
-    })
-  return noX === noO ? true : false
+// 8 kyu - I love you, a little , a lot, passionately ... not at all
+function howMuchILoveYou(nbPetals) {
+    let arr = ['I love you','a little','a lot','passionately','madly','not at all']
+  return arr[(nbPetals-1) % arr.length]
 }
-// 7 kyu - List Filtering
-function filter_list(l) {
-  return l.filter(e => Number.isInteger(e));
+// 8 kyu - Sort and Star
+function twoSort(s) {
+  let arr = s.sort()
+  return arr[0].split('').join('***')
 }
-// 7 kyu - Descending Order
-function descendingOrder(n) {
-  return parseInt(n.toString().split("").sort().reverse().join(""));
+// 8 kyu - Removing Elements
+function removeEveryOther(arr){
+  return arr.filter((_,i) => i % 2 === 0)
 }
-// 7 kyu - You're a square!
-var isSquare = function(n){
-  return Math.sqrt(n)%1===0
+// 8 kyu - Find numbers which are divisible by given number
+function divisibleBy(numbers, divisor){
+  return numbers.filter(e => e % divisor == 0)
 }
-// 7 kyu - Square Every Digit
-function squareDigits(num){
-  let result = ''
-  num.toString()
-      .split('')
-      .forEach(e => result += e ** 2)   
-    return Number(result)
+// 8 kyu - My head is at the wrong end!
+function fixTheMeerkat(arr) {
+ return arr.reverse()
 }
-// 7 kyu - Vowel Count
-function getCount(str) {
-  var vowelsCount = 0;
-  
-  // enter your majic here
-  str.split('').forEach(e => {
-    if(e === 'a' || e === 'e' || e === 'i' || e === 'o' || e ==='u'){
-       vowelsCount++
-       }
+// 8 kyu - Sum Mixed Array
+function sumMix(x){
+  let arr = x.map(Number)
+  return arr.reduce((a,b) => a + b)
+}
+// 8 kyu - Find the first non-consecutive number
+function firstNonConsecutive (arr) {
+  let temp = null
+  let n = null
+  let result = arr.forEach(e => {
+    if(e !== temp + 1 && temp !== null){
+      n = e
+    }
+    temp = e
   })
-  return vowelsCount;
+   return n
 }
 // 8 kyu - Even or Odd
 function even_or_odd(number) {

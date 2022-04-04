@@ -243,3 +243,61 @@ function countBy(x, n) {
   }
   return z;
 }
+// 8 kyu - Grasshopper - Array Mean
+var findAverage = function (nums) {
+  return nums.reduce((a,b) => a + b) / nums.length
+}
+// 8 kyu - Find the Difference in Age between Oldest and Youngest Family Members
+function differenceInAges(ages){
+  let arr = ages.sort((a,b) => a - b)
+  return [arr[arr.length-1] - arr[0],arr.pop(),arr.shift()].reverse()
+}
+// 8 kyu - SpeedCode #2 - Array Madness
+function arrayMadness(a, b) {
+  return a.map(e => e ** 2).reduce((a,b) => a + b) > b.map(e => e ** 3).reduce((a,b) => a + b) ? true : false
+}
+// 8 kyu - Basic Training: Add item to an Array
+websites.unshift("codewars")
+// 8 kyu - Remove First and Last Character Part Two
+function array(arr){
+  let len = arr.split(',').length - 1
+  if(arr.split(',').length < 3){
+    return null
+    }else{
+      return arr.split(',').slice(1,len).join(' ')
+  }
+}
+// 8 kyu - To square(root) or not to square(root)
+function squareOrSquareRoot(array) {
+  return array.map(e => {
+    if(Math.sqrt(e) % 1 === 0){
+      return Math.sqrt(e)
+    }else{
+      return e * e
+    }
+  })
+}
+// 8 kyu - Printing Array elements with Comma delimiters
+function printArray(array){
+  return array.join(',')
+}
+// 8 kyu - Merge two sorted arrays into one
+function mergeArrays(arr1, arr2) {
+  return arr1.concat(arr2.filter((i) => arr1.indexOf(i) < 0)).sort((a,b) => a - b)
+}
+// 8 kyu - Swap Values
+function swapValues(args) {
+    var temp = args[0];
+    args[0] = args[1];
+    args[1] = temp;
+  return args
+}
+// 8 kyu - A wolf in sheep's clothing
+function warnTheSheep(queue) {
+  const wolfIndex = queue.reverse().indexOf('wolf',0)
+  if(wolfIndex === 0){
+    return "Pls go away and stop eating my sheep"
+  }else{
+    return `Oi! Sheep number ${wolfIndex}! You are about to be eaten by a wolf!`
+  }
+}

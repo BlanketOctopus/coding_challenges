@@ -301,3 +301,47 @@ function warnTheSheep(queue) {
     return `Oi! Sheep number ${wolfIndex}! You are about to be eaten by a wolf!`
   }
 }
+// 8 kyu - Vowel remover
+function shortcut (string) {
+  return string.replace(/[aeiou]/g,'')
+}
+// 8 kyu - Multiplication table for number
+function multiTable(number) {
+  let table = []
+  for(let i = 1; i <= 10; i++){
+    table.push(`${i} * ${number} = ${i * number}`)
+  }
+  return table.join('\n')
+}
+// 8 kyu - Stringy Strings
+function stringy(size) {
+  return ''.padStart(size, '10')
+}
+// 8 kyu - The Feast of Many Beasts
+function feast(beast, dish) {
+  return beast[0] == dish[0] && beast[beast.length -1] == dish[dish.length -1]
+}
+// 8 kyu - Do I get a bonus?
+function bonusTime(salary, bonus) {
+  return bonus == true ? `\u00A3${salary*10}` : `\u00A3${salary}`
+}
+// 8 kyu - Are You Playing Banjo?
+function areYouPlayingBanjo(name) {
+  return name[0] == 'r' || name[0] == 'R' ? `${name} plays banjo` : `${name} does not play banjo`
+}
+// 8 kyu - DNA to RNA Conversion
+function DNAtoRNA(dna) {
+  return dna.replace(/T/g,'U')
+}
+// 8 kyu - Reversed Words
+function reverseWords(str){
+  return str.split(' ').reverse().join(' ')
+}
+// 8 kyu - Convert a Boolean to a String
+function booleanToString(b){
+  return b.toString()
+}
+// 8 kyu - Convert a String to a Number!
+var stringToNumber = function(str){
+  return Number(str)
+}

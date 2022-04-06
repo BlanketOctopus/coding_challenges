@@ -345,3 +345,62 @@ function booleanToString(b){
 var stringToNumber = function(str){
   return Number(str)
 }
+// 8 kyu - Welcome to the City
+function sayHello( name, city, state ) {
+  return `Hello, ${name.join(' ')}! Welcome to ${city}, ${state}!`
+}
+// 8 kyu - Reversing Words in a String
+function reverse(string){
+  return string.split(' ').reverse().join(' ').trim()
+}
+// 8 kyu - Name Shuffler
+function nameShuffler(str){
+  return str.split(' ').reverse().join(' ')
+}
+// 8 kyu - L1: Bartender, drinks!
+function getDrinkByProfession(param){
+  switch(param.toLowerCase()){
+      case "jabroni":
+        return "Patron Tequila"
+      case "school counselor":
+        return "Anything with Alcohol"
+      case "programmer":
+        return "Hipster Craft Beer"
+      case "bike gang member":
+        return "Moonshine"
+      case "politician":
+        return "Your tax dollars"
+      case "rapper":
+        return  "Cristal"
+      default:
+        return  "Beer"
+  }
+}
+// 8 kyu - Simple validation of a username with regex
+function validateUsr(username) {
+  return /^[a-z0-9_]{4,16}$/.test(username) 
+}
+// 8 kyu - Alan Partridge II - Apple Turnover
+function apple(x){
+  return x ** 2 > 1000 ? 'It\'s hotter than the sun!!' : 'Help yourself to a honeycomb Yorkie for the glovebox.'
+}
+// 8 kyu - Palindrome Strings
+function isPalindrome(line) {
+  return line.toString().split('').reverse().join('') == line
+}
+// 8 kyu - Dollars and Cents
+function formatMoney(amount){
+  return '$' + parseFloat(amount).toFixed(2)
+}
+// 8 kyu - The Wide-Mouthed frog!
+function mouthSize(animal) {
+  if(animal.toLowerCase() == 'alligator'){
+    return 'small'
+  }else{
+    return 'wide'
+  }
+}
+// 8 kyu - Capitalization and Mutability
+function capitalizeWord(word) {
+  return word.charAt(0).toUpperCase() + word.slice(1)
+}

@@ -404,3 +404,50 @@ function mouthSize(animal) {
 function capitalizeWord(word) {
   return word.charAt(0).toUpperCase() + word.slice(1)
 }
+// 8 kyu - Holiday VI - Shark Pontoon
+function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin){
+  if(dolphin){
+    sharkSpeed /= 2
+  }
+  return pontoonDistance/youSpeed < sharkDistance/sharkSpeed ? "Alive!" : "Shark Bait!"
+}
+// 8 kyu - Who is going to pay for the wall?
+function whoIsPaying(name){
+  return name.length > 2 ? [name, name[0] + name[1]] : [name] 
+}
+// 8 kyu - Is there a vowel in there?
+function isVow(a){
+  for (let i = 0; i < a.length; ++i){
+    let char = String.fromCharCode(a[i])
+    if ('aeiou'.indexOf(char) !== -1)
+    a[i] = char
+  }
+  return a
+}
+// 8 kyu - validate code with simple regex
+function validateCode (code) {
+  return /^[1-3]/.test(code);
+}
+// 8 kyu - Remove the time
+function shortenToDate(longDate) {
+  let shortDate = longDate.split(',')
+  return shortDate[0]
+}
+// 8 kyu - No Loops 2 - You only need one
+function check(a,x){
+  return a.includes(x)
+};
+// 8 kyu - String cleaning
+function stringClean(s){
+  return s.replace(/[0-9]/g,'')
+}
+// 8 kyu - A Strange Trip to the Market
+function isLockNessMonster(s) {
+  return s.includes('tree fiddy') || s.includes(3.50) || s.includes('three fifty') ? true : false
+}
+// 8 kyu - repeatIt
+const repeatIt = (str,n) => typeof str == 'string' ? str.repeat(n) : 'Not a string'
+// 8 kyu - String Templates - Bug Fixing #5
+function buildString(...template){
+  return `I like ${template.join(', ')}!`;
+}

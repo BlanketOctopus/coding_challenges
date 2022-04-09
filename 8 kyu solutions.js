@@ -451,3 +451,71 @@ const repeatIt = (str,n) => typeof str == 'string' ? str.repeat(n) : 'Not a stri
 function buildString(...template){
   return `I like ${template.join(', ')}!`;
 }
+// 8 kyu - UEFA EURO 2016
+function uefaEuro2016(teams, scores){
+  if(scores[0] === scores[1]){
+    return `At match ${teams[0]} - ${teams[1]}, teams played draw.`
+  }else{
+  return scores[0] > scores[1] ? `At match ${teams[0]} - ${teams[1]}, ${teams[0]} won!` : `At match ${teams[0]} - ${teams[1]}, ${teams[1]} won!`
+}}
+// 8 kyu - Polish alphabet
+function correctPolishLetters(string){
+  let diacritics = {
+    'ą':'a',
+    'ć':'c',
+    'ę':'e',
+    'ł':'l',
+    'ń':'n',
+    'ó':'o',
+    'ś':'s',
+    'ź':'z',
+    'ż':'z'
+  }
+  return string.replace(/[ąćęłńóśźż]/g, e => diacritics[e])
+}
+// 8 kyu - Take an Arrow to the knee, Functionally
+var ArrowFunc = function(arr) {
+  return arr.map(e => e = String.fromCharCode(e)).join('')
+}
+// 8 kyu - Character Frequency
+function charFreq(message) {
+  return message.split('').reduce((a, b) => {
+    return (a[b] = (a[b] || 0) + 1) && a;
+  }, {});
+}
+// 8 kyu - Get number from string
+function getNumberFromString(s) {
+  return parseInt(s.replace(/\D/g, ''))
+}
+// 8 kyu - ES6 string addition
+function joinStrings(string1, string2){
+   return `${string1} ${string2}`
+}
+// 8 kyu - Simple Comparison?
+function add(a, b){
+  return a == b
+}
+// 8 kyu - Contamination #1 -String-
+function contamination(text, char){
+  return text.replace(/./g, char)
+}
+// 8 kyu - Crash Override
+function aliasGen(fName, lName) {
+  return /^[a-z]/i.test(fName) && /^[a-z]/i.test(lName) ? `${firstName[fName[0].toUpperCase()]} ${surname[lName[0].toUpperCase()]}` : "Your name must start with a letter from A - Z.";  
+}
+// 8 kyu - Simple Change Machine
+function changeMe(moneyIn){
+  switch (moneyIn){
+    case '£5':
+      return '20p 20p 20p 20p 20p 20p 20p 20p 20p 20p 20p 20p 20p 20p 20p 20p 20p 20p 20p 20p 20p 20p 20p 20p 20p'
+    case '£2':
+      return '20p 20p 20p 20p 20p 20p 20p 20p 20p 20p'
+    case '£1':
+      return '20p 20p 20p 20p 20p'
+    case '50p':
+      return '20p 20p 10p'
+    case '20p':
+      return '10p 10p'
+    default:
+      return moneyIn
+}}

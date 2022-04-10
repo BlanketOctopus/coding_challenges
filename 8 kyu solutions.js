@@ -519,3 +519,7 @@ function changeMe(moneyIn){
     default:
       return moneyIn
 }}
+// 8 kyu - Add Length
+function addLength(str) {
+  return str.split(' ').map(e => e = `${e} ${e.length}`)
+}

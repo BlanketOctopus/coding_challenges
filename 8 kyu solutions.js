@@ -523,3 +523,7 @@ function changeMe(moneyIn){
 function addLength(str) {
   return str.split(' ').map(e => e = `${e} ${e.length}`)
 }
+// 8 kyu - Is he gonna survive?
+function hero(bullets, dragons){
+  return bullets / 2 >= dragons
+}

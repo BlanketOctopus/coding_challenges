@@ -527,3 +527,70 @@ function addLength(str) {
 function hero(bullets, dragons){
   return bullets / 2 >= dragons
 }
+// 8 kyu - Switch/Case - Bug Fixing #6
+function evalObject(value){
+  switch(value.operation){
+    case'+': return value.a + value.b;
+    case'-': return value.a - value.b;
+    case'/': return value.a / value.b;
+    case'*': return value.a * value.b;
+    case'%': return value.a % value.b;
+    case'^': return Math.pow(value.a, value.b);
+  }
+}
+// 8 kyu - Leonardo Dicaprio and Oscars
+function leo(oscar){
+  if(oscar === 88){
+    return "Leo finally won the oscar! Leo is happy"
+  }else if(oscar === 86){
+    return "Not even for Wolf of wallstreet?!"
+  }else if(oscar < 88){
+    return "When will you give Leo an Oscar?"
+  }else{
+    return "Leo got one already!"
+  }
+}
+// 8 kyu - Fuel Calculator
+function fuelPrice(litres, pricePerLitre) {
+  if(litres >= 10){
+    return Math.round(litres * (pricePerLitre - 0.25) * 100) / 100
+  }else if(litres >= 8){
+    return Math.round(litres * (pricePerLitre - 0.2) * 100) / 100
+  }else if(litres >= 6){
+    return Math.round(litres * (pricePerLitre - 0.15) * 100) / 100
+  }else if(litres >= 4){
+    return Math.round(litres * (pricePerLitre - 0.1) * 100) / 100
+  }else if(litres >= 2){
+    return Math.round(litres * (pricePerLitre - 0.05) * 100) / 100
+  }else{
+    return Math.round(litres * pricePerLitre * 100) / 100
+  }
+}
+// 8 kyu - Plural
+function plural(n) {
+  return n !== 1 
+}
+// 8 kyu - Jenny's secret message
+function greet(name){
+  if(name === "Johnny"){
+    return "Hello, my love!";
+  }else{
+      return `Hello, ${name}!`;
+  }
+}
+// 8 kyu - Grasshopper - Personalized Message
+function greet (name, owner) {
+  return name === owner ? 'Hello boss' : 'Hello guest'
+}
+// 8 kyu - Drink about
+function peopleWithAgeDrink(old) {
+  if(old < 14){
+    return 'drink toddy'
+  }else if(old < 18){
+    return 'drink coke'
+  }else if(old < 21){
+    return 'drink beer'
+  }else{
+    return 'drink whisky'
+  }
+}

@@ -594,3 +594,11 @@ function peopleWithAgeDrink(old) {
     return 'drink whisky'
   }
 }
+// 8 kyu - Chuck Norris VII - True or False? (Beginner)
+function ifChuckSaysSo(a){
+  return a !== a
+}
+// 8 kyu - L1: Set Alarm
+function setAlarm(employed, vacation){
+  return employed == true && vacation == false
+}

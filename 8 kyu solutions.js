@@ -602,3 +602,7 @@ function ifChuckSaysSo(a){
 function setAlarm(employed, vacation){
   return employed == true && vacation == false
 }
+// 8 kyu - BASIC: Making Six Toast.
+function sixToast(num) {
+  return num === 6 ? 0 : num > 6 ? num - 6 : 6 - num
+}

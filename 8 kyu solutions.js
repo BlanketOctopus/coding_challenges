@@ -606,3 +606,7 @@ function setAlarm(employed, vacation){
 function sixToast(num) {
   return num === 6 ? 0 : num > 6 ? num - 6 : 6 - num
 }
+// 8 kyu - Double Char
+function doubleChar(str) {
+  return str.split('').map(e => e += e).join('')
+}

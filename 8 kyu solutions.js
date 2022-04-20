@@ -610,3 +610,7 @@ function sixToast(num) {
 function doubleChar(str) {
   return str.split('').map(e => e += e).join('')
 }
+// 8 kyu - Do you speak "English"?
+function spEng(sentence){
+  return sentence.toLowerCase().includes('english')
+}

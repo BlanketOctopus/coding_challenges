@@ -614,3 +614,7 @@ function doubleChar(str) {
 function spEng(sentence){
   return sentence.toLowerCase().includes('english')
 }
+// 8 kyu - Define a card suit
+function defineSuit(card) {
+  return card.includes('♣') ? 'clubs' : card.includes('♦') ? 'diamonds' : card.includes('♥') ? 'hearts' : 'spades'
+}

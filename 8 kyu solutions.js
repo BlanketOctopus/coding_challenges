@@ -618,3 +618,7 @@ function spEng(sentence){
 function defineSuit(card) {
   return card.includes('♣') ? 'clubs' : card.includes('♦') ? 'diamonds' : card.includes('♥') ? 'hearts' : 'spades'
 }
+// 8 kyu - Can we divide it?
+function isDivideBy(number, a, b) {
+  return number % a === 0 && number % b === 0
+}

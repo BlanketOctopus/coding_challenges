@@ -622,3 +622,7 @@ function defineSuit(card) {
 function isDivideBy(number, a, b) {
   return number % a === 0 && number % b === 0
 }
+// 8 kyu - Multiple of index
+function multipleOfIndex(array) {
+  return array.filter((e,i) => e % i === 0)
+}

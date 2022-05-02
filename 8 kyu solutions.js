@@ -626,3 +626,7 @@ function isDivideBy(number, a, b) {
 function multipleOfIndex(array) {
   return array.filter((e,i) => e % i === 0)
 }
+// 8 kyu - Is n divisible by x and y?
+function isDivisible(n, x, y) {
+  return n % x === 0 && n % y === 0 
+}

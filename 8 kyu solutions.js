@@ -630,3 +630,23 @@ function multipleOfIndex(array) {
 function isDivisible(n, x, y) {
   return n % x === 0 && n % y === 0 
 }
+// 8 kyu - Find Maximum and Minimum Values of a List
+var min = function(list){
+    return Math.min(...list)
+}
+
+var max = function(list){
+    return Math.max(...list)
+}
+// 8 kyu - Reversed sequence
+const reverseSeq = n => {
+  let arr = []
+  for(let i = n; i > 0; i--){
+    arr.push(i)
+  }
+  return arr
+}
+// 8 kyu - MakeUpperCase
+function makeUpperCase(str) {
+  return str.toUpperCase()
+}

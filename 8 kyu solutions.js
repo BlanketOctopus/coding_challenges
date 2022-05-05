@@ -650,3 +650,7 @@ const reverseSeq = n => {
 function makeUpperCase(str) {
   return str.toUpperCase()
 }
+// 8 kyu - Twice as old
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+  return dadYearsOld >= sonYearsOld * 2 ? dadYearsOld - sonYearsOld * 2 : sonYearsOld * 2 - dadYearsOld   
+}

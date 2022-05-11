@@ -664,3 +664,7 @@ const rps = (p1, p2) => {
     return 'Player 2 won!'
   }
 }
+// 8 kyu - Invert values
+function invert(array) {
+  return array.map(e => e * -1)
+}

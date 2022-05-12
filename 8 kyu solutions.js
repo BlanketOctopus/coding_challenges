@@ -668,3 +668,7 @@ const rps = (p1, p2) => {
 function invert(array) {
   return array.map(e => e * -1)
 }
+// 8 kyu - How many lightsabers do you own?
+function howManyLightsabersDoYouOwn(name) {
+  return name === 'Zach' ? 18 : 0
+}

@@ -672,3 +672,9 @@ function invert(array) {
 function howManyLightsabersDoYouOwn(name) {
   return name === 'Zach' ? 18 : 0
 }
+// 8 kyu - Cat years, Dog years
+var humanYearsCatYearsDogYears = function(humanYears) {
+  let catYears = humanYears > 1 ? humanYears > 2 ? 24 + ((humanYears - 2) * 4) : 24 : 15
+  let dogYears = humanYears > 1 ? humanYears > 2 ? 24 + ((humanYears - 2) * 5) : 24 : 15
+  return [humanYears,catYears,dogYears];
+}

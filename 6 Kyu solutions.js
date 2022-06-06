@@ -16,3 +16,20 @@ function solution(number){
     }
     return arr.reduce((a,b) => a + b, 0)
 }
+// 6 kyu - Sum of Digits / Digital Root
+const digital_root = (n) => n < 10 ? n : digital_root(n.toString().split('').map(e => Number(e)).reduce((a,b) => a + b, 0))
+// 6 kyu - Who likes it?
+function likes(names) {
+  switch(names.length){
+       case 0:
+         return 'no one likes this'
+       case 1:
+         return `${names[0]} likes this`
+       case 2:
+         return `${names[0]} and ${names[1]} like this`
+       case 3:
+         return `${names[0]}, ${names[1]} and ${names[2]} like this`
+       default:
+         return `${names[0]}, ${names[1]} and ${names.length - 2} others like this`
+   }
+}

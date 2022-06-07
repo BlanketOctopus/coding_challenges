@@ -33,3 +33,17 @@ function likes(names) {
          return `${names[0]}, ${names[1]} and ${names.length - 2} others like this`
    }
 }
+// 6 kyu - Array.diff
+function arrayDiff(a, b) {
+  return a.filter(e => {
+    if(!b.includes(e)){
+      return e
+    }
+  })
+}
+// 6 kyu - Stop gninnipS My sdroW!
+function spinWords(string){
+  return string.split(' ').map(e => {
+    return e.length < 5 ? e : e.split('').reverse().join('')
+  }).join(' ')
+}

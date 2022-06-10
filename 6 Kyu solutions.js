@@ -47,3 +47,13 @@ function spinWords(string){
     return e.length < 5 ? e : e.split('').reverse().join('')
   }).join(' ')
 }
+// 6 kyu - Find The Parity Outlier
+function findOutlier(integers){
+  const even = integers.filter(e => e % 2 === 0)
+  const odd = integers.filter(e => e % 2 !== 0)
+  return even.length === 1 ? even[0] : odd[0]
+}
+// 6 kyu - Bit Counting
+var countBits = function(n) {
+  return n.toString(2).replace(/0/g,'').length
+}
